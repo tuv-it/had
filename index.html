@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <div id="gameScreen">
+            <div class="score-box">Skóre: <span id="currentScore">0</span></div>
+            <canvas id="gameCanvas"></canvas>
+            
+            <div class="dpad-container">
+                <div class="dpad-row">
+                    <button class="dpad-btn" id="btnUp">▲</button>
+                </div>
+                <div class="dpad-row">
+                    <button class="dpad-btn" id="btnLeft">◀</button>
+                    <button class="dpad-btn" id="btnDown">▼</button>
+                    <button class="dpad-btn" id="btnRight">▶</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="resultScreen" class="hidden">
+            <h2>Konec hry!</h2>
+            <p>Tvoje finální skóre je: <strong id="finalScore">0</strong></p>
+            <button class="action-btn" id="restartBtn">Hrát znovu</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

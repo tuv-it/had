@@ -1,0 +1,145 @@
+:root {
+    --primary-color: #07aa2d;
+    --snake-body: #0ACC38;
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
+}
+
+body { 
+    background: var(--bg-color); 
+    color: var(--text-main); 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100vh; 
+    overflow: hidden; 
+    touch-action: none;
+    padding: 10px; 
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+
+.game-container { 
+    width: 100%; 
+    max-width: 380px; 
+    background: var(--card-bg); 
+    padding: 15px; 
+    border-radius: 16px; 
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5); 
+    text-align: center; 
+    border: 1px solid #334155; 
+}
+
+.hidden { 
+    display: none !important; 
+}
+
+.score-box { 
+    font-size: 1.4rem; 
+    font-weight: 700; 
+    margin-bottom: 10px; 
+}
+
+.score-box span { 
+    color: var(--primary-color); 
+    font-size: 1.6rem; 
+}
+
+h2 { 
+    font-size: 1.6rem; 
+    margin-bottom: 10px; 
+}
+
+p { 
+    color: var(--text-muted); 
+    margin-bottom: 20px; 
+    font-size: 0.95rem; 
+}
+
+#restartBtn {
+    background-color: #0052C2;
+    color: white;
+    border: none;
+}
+
+#currentScore {
+    color: #2a87ca;
+}
+
+#finalScore {
+    font-size: 1.6rem; 
+    color: #fff;
+}
+
+#gameCanvas { 
+    background: #020617; 
+    display: block; 
+    border-radius: 12px; 
+    border: 2px solid #1e293b; 
+    margin: 0 auto; 
+}
+
+.dpad-container { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 15px; 
+    gap: 8px; 
+}
+
+.dpad-row { 
+    display: flex; 
+    gap: 20px; 
+}
+
+.dpad-btn { 
+    width: 60px; 
+    height: 50px; 
+    background: #334155; 
+    border: 1px solid #475569; 
+    color: white; 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    border-radius: 10px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer; 
+    user-select: none; 
+    -webkit-user-select: none; 
+    transition: background 0.1s; 
+}
+
+.dpad-btn:active { 
+    background: var(--primary-color); 
+    border-color: var(--primary-color); 
+}
+
+.action-btn { 
+    width: 100%; 
+    padding: 14px; 
+    background: var(--primary-color); 
+    color: white; 
+    border: none; 
+    border-radius: 8px; 
+    font-size: 1rem; 
+    font-weight: 600; 
+    cursor: pointer; 
+    margin-top: 15px; 
+}
+
+.action-btn:active { 
+    opacity: 0.9; 
+}
